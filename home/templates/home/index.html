@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html>
+	<head>
+		<title>Weather Web By Vit Bhopal</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="{% static 'images/logo.svg' %}" alt="" /></span>
+						<h1>Weather Web</h1>
+						<p>Just another website to give you the weather information.</p>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+						<section id="intro" class="main">
+							<div class="spotlight">
+								<div class="content">
+									<header class="major">
+										<h2>Weather in VIT Bhopal</h2>
+									</header>
+									<p>Section is still in development.</p>
+								</div>
+								<span class="image"><img src="{% static 'images/index.png' %}" alt="" /></span>
+							</div>
+						</section>
+
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Weather in Bhopal</h2>
+										</header>
+										<p>Temprature : {{temp}} 'C	<br>Clouds : {{clouds}} %<br>Humidity : {{humidity}} %<br>Pressure : {{pressure}} hpa<br>Wind : {{wind}} m/s</p>
+									</div>
+									<span class="image"><img src="{% static 'images/index.png' %}" alt="" /></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Custom Temprature Search</h2>
+								</header>
+								<ul class="features">
+
+										<li><p>Type the name of the city</p>
+										<input id="text_1" type="text"></li>
+										<br>
+										<li><p>Type the name of the country</p>
+										<input id="text_2" type="text"></li>
+
+								</ul>
+								<button id="button_1">Search</button>
+								<br>
+								<ul id="result" class="statistics" style="display:none">
+									<br>
+									<li class="style1">
+										<span class="icon fa-code-fork"></span>
+										<strong id="s1"></strong> Temperature
+									</li>
+									<li class="style2">
+										<span class="icon fa-folder-open-o"></span>
+										<strong id="s2"></strong> Clouds
+									</li>
+									<li class="style3">
+										<span class="icon fa-signal"></span>
+										<strong id="s3"></strong> Humidity
+									</li>
+									<li class="style4">
+										<span class="icon fa-laptop"></span>
+										<strong id="s4"></strong> Pressure
+									</li>
+									<li class="style5">
+										<span class="icon fa-diamond"></span>
+										<strong id="s5"></strong> Wind Speed
+									</li>
+								</ul>
+
+							</section>
+
+					</div>
+
+				<!-- Footer-->
+					<footer id="footer">
+						<section>
+							<h2>Brought to you by VIT BHOPAL students</h2>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/jquery.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'js/browser.min.js' %}"></script>
+			<script src="{% static 'js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'js/util.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+			<script src="{% static 'js/exc.js' %}"></script>
+
+	</body>
+</html>
