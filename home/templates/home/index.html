@@ -23,7 +23,7 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Introduction -->
+						<!-- Introduction
 						<section id="intro" class="main">
 							<div class="spotlight">
 								<div class="content">
@@ -34,17 +34,43 @@
 								</div>
 								<span class="image"><img src="{% static 'images/index.png' %}" alt="" /></span>
 							</div>
-						</section>
+						</section>-->
 
 							<section id="intro" class="main">
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Weather in Bhopal</h2>
+											<h2>Weather in Kothri(Bhopal)</h2>
 										</header>
-										<p>Temprature : {{temp}} 'C	<br>Clouds : {{clouds}} %<br>Humidity : {{humidity}} %<br>Pressure : {{pressure}} hpa<br>Wind : {{wind}} m/s</p>
+										<p>Latitude : 23.2<br>Longitude : 77.08<br>Temprature : {{temp}} 'C	<br>Clouds : {{clouds}} %<br>Humidity : {{humidity}} %<br>Pressure : {{pressure}} hpa<br>Wind : {{wind}} m/s</p>
+										<button id="show">Show Forecast</button>
+										<button id="hide" style="display:none">Hide Forecast</button>
 									</div>
 									<span class="image"><img src="{% static 'images/index.png' %}" alt="" /></span>
+								</div>
+							</section>
+
+							<section id="forecast" class="main special" style="display:none">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Weather in Kothri(Bhopal)</h2>
+										</header>
+										<ul class="features">
+										<li><br><button id="prev">Previous 3hrs</button><br><br><br><button id="prev_day">Previous Day</button></li>
+										<li>
+											<p id="p1"></p>
+											<p id="p2"></p>
+											<p id="p3"></p>
+											<p id="p4"></p>
+											<p id="p5"></p>
+											<p id="p6"></p>
+
+
+										</li>
+										<li><br><button id="next">Next 3hrs</button><br><br><br><button id="next_day">Next Day</button></li>
+									</ul>
+									</div>
 								</div>
 							</section>
 
@@ -53,6 +79,12 @@
 								<header class="major">
 									<h2>Custom Temprature Search</h2>
 								</header>
+								<ul class="features">
+									<li><button id="button_3">See by location name</button></li>
+									<li><button id="button_4">See by co-ordinates</button></li>
+								</ul>
+
+								<div id="first_1">
 								<ul class="features">
 
 										<li><p>Type the name of the city</p>
@@ -63,8 +95,25 @@
 
 								</ul>
 								<button id="button_1">Search</button>
+							</div>
+							<div id="second" style="display:none">
+
+									<ul class="features">
+									<li><p>Type the longitude</p>
+									<input id="text_3" type="text"></li>
+									<br>
+									<li><p>Type the latitude</p>
+									<input id="text_4" type="text"></li>
+									</ul>
+									<button id="button_2">Search</button>
+								<div>
 								<br>
-								<ul id="result" class="statistics" style="display:none">
+							</section>
+							<section id="shoot" class="main special" style="display:none">
+								<header class="major">
+									<h2>Result</h2>
+								</header>
+								<ul class="statistics">
 									<br>
 									<li class="style1">
 										<span class="icon fa-code-fork"></span>
@@ -87,7 +136,6 @@
 										<strong id="s5"></strong> Wind Speed
 									</li>
 								</ul>
-
 							</section>
 
 					</div>
