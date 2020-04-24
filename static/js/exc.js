@@ -6,7 +6,7 @@ $(document).ready(function() {
     var y = $('#text_1').val();
     var z = $('#text_2').val();
     $.ajax({
-      url: 'http://api.openweathermap.org/data/2.5/weather?q=' + y + ',' + z + '&APPID=3ea8c4603341150369ad240ffece6189',
+      url: 'http://api.openweathermap.org/data/2.5/weather?q=' + y + ',' + z + '&APPID=YOUR_ID',
       dataType: 'jsonp',
       success: function(json) {
           s1.innerText = (json.main.temp-273.15) + " 'C";
@@ -24,7 +24,7 @@ $(document).ready(function() {
     var y = $('#text_3').val();
     var z = $('#text_4').val();
     $.ajax({
-      url: 'http://api.openweathermap.org/data/2.5/weather?lat=' + y + '&lon=' + z + '&APPID=3ea8c4603341150369ad240ffece6189',
+      url: 'http://api.openweathermap.org/data/2.5/weather?lat=' + y + '&lon=' + z + '&APPID=YOUR_ID',
       dataType: 'jsonp',
       success: function(json) {
           s1.innerText = (json.main.temp-273.15) + " 'C";
@@ -60,7 +60,7 @@ $(document).ready(function() {
     var yz = document.getElementById('hide');
     var z = document.getElementById('forecast');
     $.ajax({
-      url: 'http://api.openweathermap.org/data/2.5/forecast?lat=23.20&lon=77.08&APPID=3ea8c4603341150369ad240ffece6189',
+      url: 'http://api.openweathermap.org/data/2.5/forecast?lat=23.20&lon=77.08&APPID=YOUR_ID',
       dataType: 'jsonp',
       success: function(json) {
         p1.innerText = "Temprature : " + (json.list[count].main.temp-273.15) + " 'C";
@@ -89,7 +89,7 @@ $(document).ready(function() {
     if(count>0){
       count = count-1;
       $.ajax({
-        url: 'http://api.openweathermap.org/data/2.5/forecast?lat=23.20&lon=77.08&APPID=3ea8c4603341150369ad240ffece6189',
+        url: 'http://api.openweathermap.org/data/2.5/forecast?lat=23.20&lon=77.08&APPID=YOUR_ID',
         dataType: 'jsonp',
         success: function(json) {
           p1.innerText = "Temprature : " + (json.list[count].main.temp-273.15) + " 'C";
@@ -106,7 +106,7 @@ $(document).ready(function() {
   $("#next").click(function(e) {
     count = count+1;
     $.ajax({
-      url: 'http://api.openweathermap.org/data/2.5/forecast?lat=23.20&lon=77.08&APPID=3ea8c4603341150369ad240ffece6189',
+      url: 'http://api.openweathermap.org/data/2.5/forecast?lat=23.20&lon=77.08&APPID=YOUR_ID',
       dataType: 'jsonp',
       success: function(json) {
         p1.innerText = "Temprature : " + (json.list[count].main.temp-273.15) + " 'C";
@@ -123,7 +123,7 @@ $(document).ready(function() {
     if(count>0){
       count = count-8;
       $.ajax({
-        url: 'http://api.openweathermap.org/data/2.5/forecast?lat=23.20&lon=77.08&APPID=3ea8c4603341150369ad240ffece6189',
+        url: 'http://api.openweathermap.org/data/2.5/forecast?lat=23.20&lon=77.08&APPID=YOUR_ID',
         dataType: 'jsonp',
         success: function(json) {
           p1.innerText = "Temprature : " + (json.list[count].main.temp-273.15) + " 'C";
@@ -140,7 +140,7 @@ $(document).ready(function() {
   $("#next_day").click(function(e) {
     count = count+8;
     $.ajax({
-      url: 'http://api.openweathermap.org/data/2.5/forecast?lat=23.20&lon=77.08&APPID=3ea8c4603341150369ad240ffece6189',
+      url: 'http://api.openweathermap.org/data/2.5/forecast?lat=23.20&lon=77.08&APPID=YOUR_ID',
       dataType: 'jsonp',
       success: function(json) {
         p1.innerText = "Temprature : " + (json.list[count].main.temp-273.15) + " 'C";
